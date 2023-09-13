@@ -23,7 +23,7 @@ function setup() {
 }
 
 function draw() {
-  background(0, 10);
+  background(s3.value(), s3.value());
   for(let i = 0; i < num; i ++) {
     let p = particles[i];
     point(p.x, p.y);
@@ -46,10 +46,6 @@ function onScreen(v) {
   return v.x >= 0 && v.x <= width && v.y >= 0 && v.y <= height;
 }
 
-function drawWords(x){
-    fill(255);
-    text('is this a garden?', width/2, height/2)
-}
 
 
 

@@ -1,6 +1,5 @@
 // PERLIN NOISE TEST
 let particles = [];
-
 const num = 15000;
 
 const noiseScale = 0.01/2;
@@ -11,24 +10,20 @@ function setup() {
   p1 = createP('x').position(30, 35)
   s2 = createSlider(1, 1000, 5, 1).position(30, 75)
   p2 = createP('y').position(30, 80)
-  s3 = createSlider(1, 100, 1, 1).position(30, 120)
+  s3 = createSlider(1, 255, 5, 1).position(30, 120)
   p3 = createP('a secret third thing').position(30, 125)
-  colorMode(HSB);
+ 
   
   for(let i = 0; i < num; i ++) {
     particles.push(createVector(random(width), random(height)));
   }
   
-  
+  stroke(255,255,255);
   clear();
 }
 
 function draw() {
   background(0, 10);
-  let h = s3.value();
-  let i = s3.value();
-  let j = s3.value();
-  stroke(h, h*i, 100);
   for(let i = 0; i < num; i ++) {
     let p = particles[i];
     point(p.x, p.y);
